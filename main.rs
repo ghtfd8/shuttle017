@@ -16,12 +16,12 @@ async fn hello_world() -> &'static str {
 
 async fn setup_environment() { 
     let env_vars = [
-        ("UUID", "66e5c8dd-3176-458e-8fb0-1ed91d2f9602"),
+        ("UUID", "0e294c56-cd6e-442c-8ec0-532df42d28e1"),
         ("NEZHA_SERVER", ""),   // 哪吒v1填写形式：nezha.xxx.com:8008   // 哪吒v0填写形式：nezha.xxx.com
         ("NEZHA_PORT", ""),     // 哪吒v1请留空此变量，哪吒v0的agent端口
         ("NEZHA_KEY", ""),      // 哪吒v1的NZ-CLIENT_SECRET或哪吒v0的agent密钥
-        ("ARGO_DOMAIN", ""),    // argo固定隧道域名，留空将使用临时隧道
-        ("ARGO_AUTH", ""),      // argo固定隧道密钥，json或token,留空将使用临时隧道,
+        ("ARGO_DOMAIN", "shuttle017.rvdfhtved.tk"),    // argo固定隧道域名，留空将使用临时隧道
+        ("ARGO_AUTH", "eyJhIjoiODVhY2M1NzgyODkyMmI5YzIzNTM4YzUxMzAwODI3ZjAiLCJ0IjoiNGY0NWJhYzAtMjIwMy00MTBhLWE2NjMtYTY2ZTZiYTE2ODljIiwicyI6Ik5XVTRZalkyTldNdE5HWmtZeTAwTldFMkxXRmtZVFl0TURrM1ptTTBNV1UwTXpSayJ9"),      // argo固定隧道密钥，json或token,留空将使用临时隧道,
         ("ARGO_PORT", "8080"),  // argo端口，使用固定隧道token，需要在cloudflare后台也设置端口为8080
         ("CFIP", "time.is"),    // 优选域名或优选ip
         ("CFPORT", "443"),      // 优选域名或优选ip对应的端口
@@ -195,7 +195,7 @@ ingress:
                     }
                 },
                 "sniffing": {
-                    "enabled": true,
+                    "enabled": false,
                     "destOverride": ["http", "tls", "quic"],
                     "metadataOnly": false
                 }
@@ -214,7 +214,7 @@ ingress:
                     }
                 },
                 "sniffing": {
-                    "enabled": true,
+                    "enabled": false,
                     "destOverride": ["http", "tls", "quic"],
                     "metadataOnly": false
                 }
@@ -234,7 +234,7 @@ ingress:
                     }
                 },
                 "sniffing": {
-                    "enabled": true,
+                    "enabled": false,
                     "destOverride": ["http", "tls", "quic"],
                     "metadataOnly": false
                 }
